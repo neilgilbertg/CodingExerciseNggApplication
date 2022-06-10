@@ -20,6 +20,14 @@ Project Specifications:
 * IDE used: IntelliJ IDE
 * OS Used: Linux Mint
 
+Deployment: (Reference: https://spring.io/quickstart)
+* Clone repo
+* Open terminal or cmd
+* Navigate to project folder
+* Run:
+  * Windows: mvnw spring-boot:run
+  * Linux: ./mvnw spring-boot:run
+
 Documentations:
 * Javadoc: 
 https://github.com/neilgilbertg/CodingExerciseNggApplication/tree/master/javadoc
