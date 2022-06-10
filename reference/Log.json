@@ -16,7 +16,7 @@
   "paths": {
     "/add": {
       "post": {
-        "summary": "Load multiple logs",
+        "summary": "Load one log",
         "operationId": "post-log",
         "responses": {
           "200": {
