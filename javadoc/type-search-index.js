@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"OpenHouse.AI.CodingExerciseNGG","l":"CodingExerciseNggApplication"},{"p":"OpenHouse.AI.CodingExerciseNGG","l":"CodingExerciseNggApplicationTests"},{"p":"OpenHouse.AI.CodingExerciseNGG","l":"FileHandler"},{"p":"OpenHouse.AI.CodingExerciseNGG","l":"SQLiteHandler"}]

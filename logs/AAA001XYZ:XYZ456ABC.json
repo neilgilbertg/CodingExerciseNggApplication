@@ -1,0 +1,1 @@
+{"sessionId":"XYZ456ABC","userId":"AAA001XYZ","actions":[{"time":"2020-10-18T21:37:28-06:00","type":"CLICK","properties":{"locationY":11,"locationX":52}},{"time":"2018-10-18T21:37:30-06:00","type":"VIEW","properties":{"viewedId":"FDJKLHSLD"}},{"time":"2018-10-18T21:37:30-06:00","type":"NAVIGATE","properties":{"pageTo":"inventory","pageFrom":"communities"}}]}
