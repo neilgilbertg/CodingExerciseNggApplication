@@ -14,6 +14,7 @@ Project Specifications:
 * Languages used: Java
 * Data Transport Mode: JSON
 * IDE used: IntelliJ IDE
+* OS Used: Linux Mint
 
 Documentations:
 * Javadoc: 
