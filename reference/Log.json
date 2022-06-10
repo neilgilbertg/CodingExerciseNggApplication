@@ -1,0 +1,181 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "f3z6nchdjy94f"
+  },
+  "info": {
+    "title": "Log",
+    "version": "1.0",
+    "summary": "API to add one log at a time"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/log/"
+    }
+  ],
+  "paths": {
+    "add": {
+      "post": {
+        "summary": "Load multiple logs",
+        "operationId": "post-log",
+        "responses": {
+          "200": {
+            "description": "Logs inserted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "x-examples": {
+                    "example-1": {
+                      "success": true,
+                      "message": "Log successfully stored"
+                    }
+                  }
+                },
+                "examples": {
+                  "New User Bob Fellow": {
+                    "value": {
+                      "id": 12,
+                      "firstName": "Bob",
+                      "lastName": "Fellow",
+                      "email": "bob.fellow@gmail.com",
+                      "dateOfBirth": "1996-08-24",
+                      "emailVerified": false,
+                      "createDate": "2020-11-18"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing Required Information"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string"
+                  },
+                  "sessionId": {
+                    "type": "string"
+                  },
+                  "actions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "time": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "locationX": {
+                              "type": "integer"
+                            },
+                            "locationY": {
+                              "type": "integer"
+                            },
+                            "viewedId": {
+                              "type": "string"
+                            },
+                            "pageFrom": {
+                              "type": "string"
+                            },
+                            "pageTo": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "x-examples": {
+                  "example-1": {
+                    "userId": "ABC123XYZ",
+                    "sessionId": "XYZ456ABC",
+                    "actions": [
+                      {
+                        "time": "2018-10-18T21:37:28-06:00",
+                        "type": "CLICK",
+                        "properties": {
+                          "locationX": 52,
+                          "locationY": 11
+                        }
+                      },
+                      {
+                        "time": "2018-10-18T21:37:30-06:00",
+                        "type": "VIEW",
+                        "properties": {
+                          "viewedId": "FDJKLHSLD"
+                        }
+                      },
+                      {
+                        "time": "2018-10-18T21:37:30-06:00",
+                        "type": "NAVIGATE",
+                        "properties": {
+                          "pageFrom": "communities",
+                          "pageTo": "inventory"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "examples": {
+                "Create User Bob Fellow": {
+                  "value": {
+                    "firstName": "Bob",
+                    "lastName": "Fellow",
+                    "email": "bob.fellow@gmail.com",
+                    "dateOfBirth": "1996-08-24"
+                  }
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          },
+          "description": "Post the necessary fields for the API to create multiple logs"
+        },
+        "description": "Add one log into the logging system",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Content-Type",
+            "description": "application/json",
+            "required": true
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "aubxlrf9lnre9"
+  },
+  "info": {
+    "title": "Logs",
+    "version": "1.0",
+    "summary": "API to add multiple logs as well as getting a list of logs"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/logs/"
+    }
+  ],
+  "paths": {
+    "get": {
+      "parameters": [],
+      "get": {
+        "summary": "Get User Info by User ID",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "User Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "object",
+                      "properties": {
+                        "sessionId": {
+                          "type": "string"
+                        },
+                        "userId": {
+                          "type": "string"
+                        },
+                        "actions": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "time": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string"
+                              },
+                              "properties": {
+                                "type": "object",
+                                "properties": {
+                                  "locationY": {
+                                    "type": "integer"
+                                  },
+                                  "locationX": {
+                                    "type": "integer"
+                                  },
+                                  "viewedId": {
+                                    "type": "string"
+                                  },
+                                  "pageTo": {
+                                    "type": "string"
+                                  },
+                                  "pageFrom": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "1": {
+                      "type": "object",
+                      "properties": {
+                        "sessionId": {
+                          "type": "string"
+                        },
+                        "userId": {
+                          "type": "string"
+                        },
+                        "actions": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "time": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string"
+                              },
+                              "properties": {
+                                "type": "object",
+                                "properties": {
+                                  "viewedId": {
+                                    "type": "string"
+                                  },
+                                  "pageTo": {
+                                    "type": "string"
+                                  },
+                                  "pageFrom": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "type": "object",
+                      "properties": {
+                        "sessionId": {
+                          "type": "string"
+                        },
+                        "userId": {
+                          "type": "string"
+                        },
+                        "actions": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "time": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string"
+                              },
+                              "properties": {
+                                "type": "object",
+                                "properties": {
+                                  "pageTo": {
+                                    "type": "string"
+                                  },
+                                  "pageFrom": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "example-1": {
+                      "0": {
+                        "sessionId": "XYZ456ABC",
+                        "userId": "AAA001XYZ",
+                        "actions": [
+                          {
+                            "time": "2020-10-18T21:37:28-06:00",
+                            "type": "CLICK",
+                            "properties": {
+                              "locationY": 11,
+                              "locationX": 52
+                            }
+                          },
+                          {
+                            "time": "2018-10-18T21:37:30-06:00",
+                            "type": "VIEW",
+                            "properties": {
+                              "viewedId": "FDJKLHSLD"
+                            }
+                          },
+                          {
+                            "time": "2018-10-18T21:37:30-06:00",
+                            "type": "NAVIGATE",
+                            "properties": {
+                              "pageTo": "inventory",
+                              "pageFrom": "communities"
+                            }
+                          }
+                        ]
+                      },
+                      "1": {
+                        "sessionId": "ABC456XYZ",
+                        "userId": "CCC003ABC",
+                        "actions": [
+                          {
+                            "time": "2025-10-18T21:37:30-06:00",
+                            "type": "VIEW",
+                            "properties": {
+                              "viewedId": "FDJKLHSLD"
+                            }
+                          },
+                          {
+                            "time": "2018-10-18T21:37:30-06:00",
+                            "type": "NAVIGATE",
+                            "properties": {
+                              "pageTo": "inventory",
+                              "pageFrom": "communities"
+                            }
+                          }
+                        ]
+                      },
+                      "2": {
+                        "sessionId": "ABC456XYZ",
+                        "userId": "BBB002ABC",
+                        "actions": [
+                          {
+                            "time": "2003-10-18T21:37:30-06:00",
+                            "type": "NAVIGATE",
+                            "properties": {
+                              "pageTo": "inventory",
+                              "pageFrom": "communities"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Get User Alice Smith": {
+                    "value": {
+                      "id": 142,
+                      "firstName": "Alice",
+                      "lastName": "Smith",
+                      "email": "alice.smith@gmail.com",
+                      "dateOfBirth": "1997-10-31",
+                      "emailVerified": true,
+                      "signUpDate": "2019-08-24"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-logs",
+        "description": "Retrieve the log information based on parameters",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "userId",
+            "description": "A user's ID in which will be checked if any logs matches"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "type",
+            "description": "The type of interaction taken by the user and will be checked if any logs matches"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "from",
+            "description": "The starting date that will checked if any logs are logged after this date"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "The ending date that will checked if any logs are logged before this date"
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Update User Information",
+        "operationId": "patch-users-userId",
+        "responses": {
+          "200": {
+            "description": "User Updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                },
+                "examples": {
+                  "Updated User Rebecca Baker": {
+                    "value": {
+                      "id": 13,
+                      "firstName": "Rebecca",
+                      "lastName": "Baker",
+                      "email": "rebecca@gmail.com",
+                      "dateOfBirth": "1985-10-02",
+                      "emailVerified": false,
+                      "createDate": "2019-08-24"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User Not Found"
+          },
+          "409": {
+            "description": "Email Already Taken"
+          }
+        },
+        "description": "Update the information of an existing user.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "If a new email is given, the user's email verified property will be set to false."
+                  },
+                  "dateOfBirth": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "Update First Name": {
+                  "value": {
+                    "firstName": "Rebecca"
+                  }
+                },
+                "Update Email": {
+                  "value": {
+                    "email": "rebecca@gmail.com"
+                  }
+                },
+                "Update Last Name & Date of Birth": {
+                  "value": {
+                    "lastName": "Baker",
+                    "dateOfBirth": "1985-10-02"
+                  }
+                }
+              }
+            }
+          },
+          "description": "Patch user properties to update."
+        }
+      }
+    },
+    "add": {
+      "post": {
+        "summary": "Load multiple logs",
+        "operationId": "post-logs",
+        "responses": {
+          "200": {
+            "description": "Logs inserted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "x-examples": {
+                    "example-1": {
+                      "success": true,
+                      "message": "Bulk of Logs successfully stored"
+                    }
+                  }
+                },
+                "examples": {
+                  "New User Bob Fellow": {
+                    "value": {
+                      "id": 12,
+                      "firstName": "Bob",
+                      "lastName": "Fellow",
+                      "email": "bob.fellow@gmail.com",
+                      "dateOfBirth": "1996-08-24",
+                      "emailVerified": false,
+                      "createDate": "2020-11-18"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing Required Information"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "0": {
+                    "type": "object",
+                    "properties": {
+                      "userId": {
+                        "type": "string"
+                      },
+                      "sessionId": {
+                        "type": "string"
+                      },
+                      "actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "time": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "locationX": {
+                                  "type": "integer"
+                                },
+                                "locationY": {
+                                  "type": "integer"
+                                },
+                                "viewedId": {
+                                  "type": "string"
+                                },
+                                "pageFrom": {
+                                  "type": "string"
+                                },
+                                "pageTo": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1": {
+                    "type": "object",
+                    "properties": {
+                      "userId": {
+                        "type": "string"
+                      },
+                      "sessionId": {
+                        "type": "string"
+                      },
+                      "actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "time": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "pageFrom": {
+                                  "type": "string"
+                                },
+                                "pageTo": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2": {
+                    "type": "object",
+                    "properties": {
+                      "userId": {
+                        "type": "string"
+                      },
+                      "sessionId": {
+                        "type": "string"
+                      },
+                      "actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "time": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "viewedId": {
+                                  "type": "string"
+                                },
+                                "pageFrom": {
+                                  "type": "string"
+                                },
+                                "pageTo": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "x-examples": {
+                  "example-1": {
+                    "0": {
+                      "userId": "AAA001XYZ",
+                      "sessionId": "XYZ456ABC",
+                      "actions": [
+                        {
+                          "time": "2020-10-18T21:37:28-06:00",
+                          "type": "CLICK",
+                          "properties": {
+                            "locationX": 52,
+                            "locationY": 11
+                          }
+                        },
+                        {
+                          "time": "2018-10-18T21:37:30-06:00",
+                          "type": "VIEW",
+                          "properties": {
+                            "viewedId": "FDJKLHSLD"
+                          }
+                        },
+                        {
+                          "time": "2018-10-18T21:37:30-06:00",
+                          "type": "NAVIGATE",
+                          "properties": {
+                            "pageFrom": "communities",
+                            "pageTo": "inventory"
+                          }
+                        }
+                      ]
+                    },
+                    "1": {
+                      "userId": "BBB002ABC",
+                      "sessionId": "ABC456XYZ",
+                      "actions": [
+                        {
+                          "time": "2003-10-18T21:37:30-06:00",
+                          "type": "NAVIGATE",
+                          "properties": {
+                            "pageFrom": "communities",
+                            "pageTo": "inventory"
+                          }
+                        }
+                      ]
+                    },
+                    "2": {
+                      "userId": "CCC003ABC",
+                      "sessionId": "ABC456XYZ",
+                      "actions": [
+                        {
+                          "time": "2025-10-18T21:37:30-06:00",
+                          "type": "VIEW",
+                          "properties": {
+                            "viewedId": "FDJKLHSLD"
+                          }
+                        },
+                        {
+                          "time": "2018-10-18T21:37:30-06:00",
+                          "type": "NAVIGATE",
+                          "properties": {
+                            "pageFrom": "communities",
+                            "pageTo": "inventory"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "examples": {
+                "Create User Bob Fellow": {
+                  "value": {
+                    "firstName": "Bob",
+                    "lastName": "Fellow",
+                    "email": "bob.fellow@gmail.com",
+                    "dateOfBirth": "1996-08-24"
+                  }
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          },
+          "description": "Post the necessary fields for the API to create multiple logs"
+        },
+        "description": "Add multiple logs into the logging system",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Content-Type",
+            "description": "application/json",
+            "required": true
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
