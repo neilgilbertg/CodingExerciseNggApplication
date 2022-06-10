@@ -2,6 +2,7 @@
 By: Neil Gilbert Gallardo
 
 Summary:
+
 This is a project created to fulfill a Coding Exercise test. The program utilizes technologies like Spring Boot, Java, JSON to create a RESTFul API that stores logs and retrieves them according to to requests
 
 Exercise Requirements: (condensed from the Exercise document)
