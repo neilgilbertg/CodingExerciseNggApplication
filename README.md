@@ -1,6 +1,10 @@
 <h1>Coding Exercise</h1>
 By: Neil Gilbert Gallardo
 
+Summary:
+
+This is a project created to fulfill a Coding Exercise test. The program utilizes technologies like Spring Boot, Java, JSON to create a RESTFul API that stores logs and retrieves them according to to requests
+
 Exercise Requirements: (condensed from the Exercise document)
 * Uses JSON (according to the Sample Log) as its data delivery method.
 * Should utilize Spring Boot, Flask, etc. frameworks as its primary deployment method.
@@ -14,6 +18,7 @@ Project Specifications:
 * Languages used: Java
 * Data Transport Mode: JSON
 * IDE used: IntelliJ IDE
+* OS Used: Linux Mint
 
 Documentations:
 * Javadoc: 
