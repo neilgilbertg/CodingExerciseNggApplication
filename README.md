@@ -18,7 +18,8 @@ Project Specifications:
 Documentations:
 * Javadoc: 
 https://github.com/neilgilbertg/CodingExerciseNggApplication/tree/master/javadoc
-* REST API documentation: 
+* REST API documentation:
+  https://neil-gallardo.stoplight.io/docs/codingexercisenggapplication/7458e990d7040-load-multiple-logs
 
 
 Evaluation Considerations
